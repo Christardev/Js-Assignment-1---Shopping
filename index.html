@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Test 1</title>
+  </head>
+  <body>
+    <h1>Js Assignment 1 : Shopping</h1>
+    <script>
+      let nombreArticle = Number(prompt("Enter the number of  articles"));
+      let montantArticleTotal = 0;
+      let reduction = 0;
+
+      for (let n = 1; n <= nombreArticle; n++) {
+        let article = Number(prompt(`The price of the  ${n} th article is : `));
+        montantArticleTotal;
+        montantArticleTotal = montantArticleTotal + article;
+      }
+
+      console.log(`Total Price for all article is : ${montantArticleTotal}`);
+
+      if (montantArticleTotal > 100000) {
+        reduction = montantArticleTotal * 0.1;
+        montantArticleTotal = montantArticleTotal - reduction;
+        console.log(`The Price with the reduction : ${montantArticleTotal} `);
+      } else {
+        console.log(`No Reduction! `);
+      }
+    </script>
+  </body>
+</html>
