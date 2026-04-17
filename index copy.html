@@ -10,24 +10,15 @@
     <script>
       let nombreArticle = Number(prompt("Enter the number of  articles"));
       let montantArticleTotal = 0;
-      let reduction = 0;
 
       for (let n = 1; n <= nombreArticle; n++) {
-        let articlePrice = 0;
-        while (articlePrice <= 0) {
-          articlePrice = Number(
-            prompt(`The price of the  ${n} th article is (must > 0) : `),
-          );
-        }
-
-        montantArticleTotal = montantArticleTotal + articlePrice;
+        montantArticleTotal += Number(prompt(`The price of the  ${n} th article is : `));
       }
 
       alert(`Total Price for all article is : ${montantArticleTotal}`);
 
       if (montantArticleTotal > 100000) {
-        reduction = montantArticleTotal * 0.1;
-        montantArticleTotal = montantArticleTotal - reduction;
+        montantArticleTotal = montantArticleTotal - montantArticleTotal * 0.1;
         alert(`The Price with the reduction : ${montantArticleTotal} `);
       } else {
         alert(`No Reduction! `);
